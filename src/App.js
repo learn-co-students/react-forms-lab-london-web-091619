@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-import LoginForm from "./components/LoginForm";
-import TwitterMessage from "./components/TwitterMessage";
+import LoginForm from './components/LoginForm'
+import TwitterMessage from './components/TwitterMessage'
 
 class App extends Component {
-
-  login = ({ username, password }) => {
-    console.log(`Logging in ${username} with password ${password}`);
-  };
+  login = e => {
+    e.preventDefault()
+    console.log(`Logged in`)
+  }
 
   render() {
     return (
       <div>
-
         <h1>
           <pre>LoginForm</pre>
         </h1>
@@ -21,9 +20,6 @@ class App extends Component {
           <pre>TwitterMessage</pre>
         </h1>
         <TwitterMessage maxChars={280} />
-
-
-
       </div>
     )
   }
